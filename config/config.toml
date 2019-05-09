@@ -6,7 +6,7 @@ concurrent = 2
   token = "runner token"
   executor = "docker"
   [runners.docker]
-    image: "docker:stable"
+    image = "docker:stable"
     privileged = true
     disable_cache = false
     shm_size = 0

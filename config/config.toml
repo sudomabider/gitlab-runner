@@ -10,4 +10,4 @@ concurrent = 2
     privileged = true
     disable_cache = false
     shm_size = 0
-    volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/cache"]
+    volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/opt:/opt", "/cache"]

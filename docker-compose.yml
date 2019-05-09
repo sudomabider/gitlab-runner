@@ -1,0 +1,14 @@
+version: '3'
+
+service:
+  runner:
+    image: gitlab/gitlab-runner:alpine
+    restart: 'unless-stopped'
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '10m'
+        max-file: '10'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config:/etc/gitlab-runner

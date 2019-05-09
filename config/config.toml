@@ -1,0 +1,13 @@
+concurrent = 2
+
+[[runners]]
+  name = "runner name"
+  url = "runner url"
+  token = "runner token"
+  executor = "docker"
+  [runners.docker]
+    image: "docker:stable"
+    privileged = true
+    disable_cache = false
+    shm_size = 0
+    volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/cache"]
